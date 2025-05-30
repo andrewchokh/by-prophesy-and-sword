@@ -1,3 +1,66 @@
-[gd_scene format=3 uid="uid://c7qp2x7v0iqjn"]
+[gd_scene load_steps=9 format=4 uid="uid://c7qp2x7v0iqjn"]
+
+[ext_resource type="Texture2D" uid="uid://ctx6b6fq5e6mr" path="res://assets/sprites/tilesets/forest_tilesheet.png" id="1_0wfyh"]
+[ext_resource type="PackedScene" uid="uid://bq2chybunbxrx" path="res://scenes/enemies/golem.tscn" id="1_o5qli"]
+[ext_resource type="Script" uid="uid://cia7vcfmddhw8" path="res://scripts/ui/Camera2d.cs" id="1_sugp2"]
+[ext_resource type="PackedScene" uid="uid://bw5o1dn3rt5lk" path="res://scenes/players/bob.tscn" id="5_tbgi4"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tbgi4"]
+texture = ExtResource("1_0wfyh")
+2:0/0 = 0
+6:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+2:2/0 = 0
+6:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_tefeu"]
+sources/0 = SubResource("TileSetAtlasSource_tbgi4")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jyhfs"]
+texture = ExtResource("1_0wfyh")
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_tbgi4"]
+physics_layer_0/collision_layer = 1
+sources/1 = SubResource("TileSetAtlasSource_jyhfs")
 
 [node name="Main" type="Node"]
+
+[node name="TileMapLayers" type="Node2D" parent="."]
+
+[node name="Floor" type="TileMapLayer" parent="TileMapLayers"]
+tile_map_data = PackedByteArray("AAD6//7/AAAAAAEAAAD6////AAABAAEAAAD6/wAAAAABAAEAAAD6/wEAAAAAAAEAAAD6/wIAAAAAAAEAAAD7//7/AAABAAEAAAD7////AAABAAEAAAD7/wAAAAAAAAEAAAD7/wEAAAABAAEAAAD7/wIAAAABAAEAAAD8//7/AAABAAEAAAD8////AAABAAEAAAD8/wAAAAABAAEAAAD8/wEAAAABAAEAAAD8/wIAAAAAAAEAAAD9//7/AAAAAAEAAAD9/wAAAAAAAAEAAAD9/wEAAAAAAAEAAAD9/wIAAAAAAAEAAAD+//7/AAAAAAEAAAD+////AAABAAEAAAD+/wAAAAAAAAEAAAD+/wEAAAABAAEAAAD+/wIAAAAAAAEAAAD///7/AAABAAEAAAD/////AAAAAAEAAAD//wAAAAAAAAEAAAD//wEAAAABAAEAAAD//wIAAAABAAEAAAAAAP7/AAAAAAEAAAAAAP//AAABAAEAAAAAAAAAAAAAAAEAAAAAAAEAAAAAAAEAAAABAP7/AAAAAAEAAAABAP//AAABAAEAAAABAAAAAAAAAAEAAAABAAEAAAAAAAEAAAABAAIAAAAAAAEAAAACAP7/AAAAAAEAAAACAP//AAABAAEAAAACAAAAAAAAAAEAAAACAAEAAAABAAEAAAACAAIAAAABAAEAAAADAP7/AAAAAAEAAAADAP//AAABAAEAAAADAAAAAAAAAAEAAAADAAEAAAABAAEAAAADAAIAAAABAAEAAAAEAP7/AAAAAAEAAAAEAP//AAAAAAEAAAAEAAAAAAABAAEAAAAEAAEAAAABAAEAAAAEAAIAAAAAAAEAAAAFAP7/AAAAAAEAAAAFAP//AAAAAAEAAAAFAAAAAAAAAAEAAAAFAAEAAAAAAAEAAAAFAAIAAAABAAEAAAD6//3/AAACAAEAAAD7//3/AAACAAEAAAD8//3/AAACAAEAAAD9//3/AAACAAEAAAD+//3/AAACAAEAAAD///3/AAACAAEAAAAAAP3/AAACAAEAAAABAP3/AAACAAEAAAACAP3/AAACAAEAAAADAP3/AAACAAEAAAAEAP3/AAACAAEAAAAFAP3/AAACAAEAAAD6//z/AAACAAAAAAD7//z/AAACAAAAAAD8//z/AAACAAAAAAD9//z/AAACAAAAAAD+//z/AAACAAAAAAD///z/AAACAAAAAAAAAPz/AAACAAAAAAABAPz/AAACAAAAAAACAPz/AAACAAAAAAADAPz/AAACAAAAAAAEAPz/AAACAAAAAAAFAPz/AAACAAAAAAAAAAMAAAAGAAEAAAABAAMAAAAGAAEAAAACAAMAAAAGAAEAAAADAAMAAAAGAAEAAAD//wMAAAAGAAEAAAD6/wMAAAAGAAEAAAD7/wMAAAAGAAEAAAD8/wMAAAAGAAEAAAD9/wMAAAAGAAEAAAD+/wMAAAAGAAEAAAAEAAMAAAAGAAEAAAAFAAMAAAAGAAEAAAAAAAIAAAAAAAEAAAD9////AAABAAEAAAA=")
+tile_set = SubResource("TileSet_tefeu")
+
+[node name="Walls" type="TileMapLayer" parent="TileMapLayers"]
+visible = false
+tile_map_data = PackedByteArray("AAAEAAgAAAACAAEAAAAFAAgAAAACAAEAAAAGAAgAAAACAAEAAAD3/wgAAAACAAEAAAD4/wgAAAACAAEAAAD3/wcAAAACAAAAAAD4/wcAAAACAAAAAAAEAAcAAAACAAAAAAAFAAcAAAACAAAAAAAGAAcAAAACAAAAAAA=")
+tile_set = SubResource("TileSet_tbgi4")
+
+[node name="Golem" parent="." instance=ExtResource("1_o5qli")]
+position = Vector2(-35, 16)
+
+[node name="Bob" parent="." instance=ExtResource("5_tbgi4")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(5, 5)
+script = ExtResource("1_sugp2")
