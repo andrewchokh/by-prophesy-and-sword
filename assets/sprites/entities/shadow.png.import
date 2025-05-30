@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://qhcxuy7lrab8"
-path="res://.godot/imported/iron_mask.png-98124b8952bda19a3fb3f834f02a9949.ctex"
+uid="uid://dqjvgued1kiu6"
+path="res://.godot/imported/shadow.png-c0c3b07898fdba8d37deb7f56b9f672c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/iron_mask.png"
-dest_files=["res://.godot/imported/iron_mask.png-98124b8952bda19a3fb3f834f02a9949.ctex"]
+source_file="res://assets/sprites/entities/shadow.png"
+dest_files=["res://.godot/imported/shadow.png-c0c3b07898fdba8d37deb7f56b9f672c.ctex"]
 
 [params]
 

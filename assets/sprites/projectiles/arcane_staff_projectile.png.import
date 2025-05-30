@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7k2f32uqoobq"
-path="res://.godot/imported/bob.png-adcf67c25c9f65f8575573e4d6c41408.ctex"
+uid="uid://bkiwnyiidvipg"
+path="res://.godot/imported/arcane_staff_projectile.png-d321ea7dc29d03a49c9d06af64ca8947.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/bob.png"
-dest_files=["res://.godot/imported/bob.png-adcf67c25c9f65f8575573e4d6c41408.ctex"]
+source_file="res://assets/sprites/projectiles/arcane_staff_projectile.png"
+dest_files=["res://.godot/imported/arcane_staff_projectile.png-d321ea7dc29d03a49c9d06af64ca8947.ctex"]
 
 [params]
 

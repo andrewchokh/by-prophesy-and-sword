@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvtuycktpi8m0"
-path="res://.godot/imported/arcane_staff.png-25fd7d079e01c943bf109b27c769ff54.ctex"
+uid="uid://dtvn148jc2m6"
+path="res://.godot/imported/dagger.png-dc41daaa8a90300e81c8a10fcb55f564.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/arcane_staff.png"
-dest_files=["res://.godot/imported/arcane_staff.png-25fd7d079e01c943bf109b27c769ff54.ctex"]
+source_file="res://assets/sprites/weapons/dagger.png"
+dest_files=["res://.godot/imported/dagger.png-dc41daaa8a90300e81c8a10fcb55f564.ctex"]
 
 [params]
 
