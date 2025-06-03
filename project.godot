@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="The Awesome Game"
+config/name="By Prophesy and Sword"
 run/main_scene="uid://c7qp2x7v0iqjn"
 config/features=PackedStringArray("4.4", "C#", "Mobile")
 config/icon="res://icon.svg"
@@ -22,7 +22,7 @@ window/size/viewport_height=768
 
 [dotnet]
 
-project/assembly_name="The Awesome Game"
+project/assembly_name="By Prophesy and Sword"
 
 [input]
 
